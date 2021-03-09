@@ -1,0 +1,648 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+$color-orange: #ff7820;
+$color-brown: #8f2d00;
+$color-black: #000000;
+$color-gray: #bababa;
+$color-gray-darker: #a1a1a1;
+$color-gray-more-darker: #717171;
+$color-white: #ffffff;
+$color-ligth-blue: #eaf3fa;
+$color-ligth-pink: #f8f4f2;
+$color-blue: #217ABA;
+$color-brownish: #c9a18e;
+
+%attr-shared {
+  display: inline-block;
+  background-color: $color-orange;
+  color: $color-white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  border-radius: 0.5em;
+  font-size: 1em;
+  padding: 0.625em 1.25em;
+  margin: 0.625em;
+  border: none;
+  cursor: pointer;
+}
+
+%flex-center-shared {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+%card-shared {
+  width: 100%;
+  border-radius: 0 30px 30px 30px;
+  margin: 0.5em 0;
+  padding: 1em 0.5em;
+  box-shadow: 0px 3px 10px $color-gray;
+}
+
+%btn--hsl-shared {
+  position: absolute;
+  bottom: -0.5em;
+  width: 4em;
+  height: 4em;
+  padding: 0.8em;
+  background-color: $color-black;
+  color: $color-white;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+}
+
+%btn-slide-shared {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 0.3em;
+  margin-top: -22px;
+  color: rgb(0, 0, 0);
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 1.6em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+%dot-shared {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0.2em 2px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/*----------------------------  top of the page -----------------------------*/
+body {
+  margin: 0;
+  font: 100% "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+#metropolia-logo-small {
+  display: none;
+}
+
+#metropolia-logo {
+  display: block;
+  max-width: 28.125em;
+  height: auto;
+  margin: 0 2em;
+}
+
+.app-lang-campuses {
+  display: none;
+}
+
+.btn-lang {
+  @extend %attr-shared;
+
+  &:hover {
+    background-color: lighten($color-orange, 10%);
+  }
+}
+
+select {
+  @extend %attr-shared;
+  min-width: 8em;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $color-orange;
+  /* for svg icon: arrow */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%238F2D00%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+  box-shadow: 0px 3px 10px $color-gray;
+}
+
+.container-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+header {
+  @extend %flex-center-shared;
+  margin: 2em 0 1em 0;
+}
+
+#hero {
+  @extend %flex-center-shared;
+  z-index: -1;
+  width: 100%;
+  height: 40vh;
+  background: url(../assets/img/karamalmi-kampus-medium.jpg) no-repeat center center/cover;
+}
+
+#hero-front {
+  @extend %flex-center-shared;
+  width: 100%;
+  height: 20vh;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 5.5vh;
+  font-weight: 500;
+  color: $color-brown;
+  text-align: center;
+}
+
+/*----------------------------  main container -----------------------------*/
+main {
+  padding: 0 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.gradient {
+  margin-top: -1em;
+  background-image: linear-gradient(
+      $color-gray,
+      transparent,
+      transparent,
+      transparent
+  );
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+/*----------------------------  forecast  -----------------------------*/
+#forecast {
+  @extend %card-shared;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px 0 30px 30px;
+  max-width: 280px;
+  height: 50px;
+  float: right;
+  border: 1px solid white;
+}
+
+.desc {
+  display: none;
+  padding-right: 0.3em;
+}
+
+.weather-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+/*----------------------------  hsl and restaurant cards -----------------------------*/
+#food-list-container,
+#hsl-container {
+  flex-direction: column;
+  margin-top: 2em;
+  max-width: 100%;
+  display: flex;
+  flex: 1;
+  width: 40em;
+}
+
+/*----------------------------  hsl card -----------------------------*/
+.hsl-container {
+  position: relative;
+  height: 335px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 0.5em;
+  margin-right: -0.5em;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #d0dce6;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.app-lang-timetable {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid $color-gray;
+  margin-bottom: 0.04em;
+}
+
+.hsl-card {
+  @extend %card-shared;
+  height: 415px;
+  background-color: $color-ligth-blue;
+}
+
+.hsl-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.3em;
+  border-bottom: 1px solid $color-gray;
+}
+
+.hsl-label {
+  display: flex;
+  align-items: center;
+  background-color: $color-blue;
+  border-radius: 4px;
+  font-weight: 300;
+  color: $color-white;
+  font-size: 1em;
+  padding: 0.25em 0.3em;
+  width: 4.5em;
+}
+
+.hsl-icon {
+  height: 1.5em;
+  width: 1.5em;
+  padding-right: 0.3em;
+}
+
+#btn-hsl-left {
+  @extend %btn--hsl-shared;
+  transform: scale(-1, 1);
+  left: -1em;
+}
+
+#btn-hsl-right {
+  @extend %btn--hsl-shared;
+  right: -1em;
+}
+
+#btn-hsl-left,
+#btn-hsl-right > svg {
+  fill: $color-white;
+}
+
+#btn-hsl-left:hover,
+#btn-hsl-right:hover {
+  background-color: lighten($color-black, 25%);
+}
+
+/*----------------------------  restaurant card -----------------------------*/
+.food-list-card {
+  @extend %card-shared;
+  min-height: 200px;
+  background-color: $color-ligth-pink;
+}
+
+.dishes {
+  margin-top: 0.2em;
+  margin-bottom: 2em;
+  line-height: 1.5;
+}
+
+.dishes li {
+  margin-top: 1em;
+}
+
+.dishes-labels {
+  margin-bottom: 1em;
+}
+
+.restaurant-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 1em;
+}
+
+.restaurant {
+  width: 48%;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.057);
+  margin: 1em 0;
+  border: 1px dashed var(--main-em-color);
+  border-radius: 10px;
+  display: flex;
+}
+
+/*----------------------------  Modal -----------------------------*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+#myModal {
+  display: none;
+  max-height: 100%;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: $color-gray-darker;
+  font-size: 4em;
+  font-weight: bold;
+  padding-right: 0.3em;
+}
+
+.all-dots-modal {
+  display: none;
+  justify-content: center;
+  padding: 0.2em;
+}
+
+.close:hover,
+.close:focus {
+  color: $color-gray-more-darker;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dotModal {
+  @extend %dot-shared;
+  background-color: rgb(80, 80, 80);
+}
+
+.active-modal,
+.dotModal:hover {
+  background-color: $color-gray-more-darker;
+}
+
+/*----------------------   change languages toggle   ----------------------*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+  margin: 0.625em;
+  box-shadow: 0px 3px 10px $color-gray;
+  border-radius: 0.5em;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 0.4em;
+  background-color: $color-orange;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 33px;
+  left: 4px;
+  bottom: 4px;
+  background-color: $color-white;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  z-index: 1;
+}
+
+input:checked + .slider {
+  background-color: $color-orange;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(49px);
+  -ms-transform: translateX(49px);
+  transform: translateX(49px);
+}
+
+.fi {
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 25%;
+  font-size: 1.5em;
+  font-family: Verdana, sans-serif;
+  z-index: 0;
+}
+
+.en {
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 75%;
+  font-size: 1.5em;
+  font-family: Verdana, sans-serif;
+  z-index: 0;
+}
+
+.slider.round {
+  border-radius: 0.5em;
+}
+
+.slider.round:before {
+  border-radius: 0.5em;
+  color: $color-brown;
+}
+
+//----------------------------  slides  -----------------------------//
+#message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -2em;
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+.metropolia-messages {
+  @extend %flex-center-shared;
+  position: relative;
+  //background-color: rgba(255, 120, 32, 0.3);
+  background-color: $color-brownish;
+  box-shadow: 0px 3px 10px $color-gray;
+  min-width: 100%;
+  min-height: 9em;
+  padding: 0.5em 10%;
+  margin-top: 2em;
+}
+
+#corona-info-container {
+  @extend %card-shared;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+  border: 1px solid $color-brown;
+  cursor: pointer;
+}
+
+
+
+.slideshow-container,
+.messageSlides {
+  display: none;
+  //padding: 0 0.5em;
+}
+
+#btn-slide-left-modal {
+  @extend %btn-slide-shared;
+  left: 0;
+  top: 39%;
+  padding: 3em 2em 3em 0.3em;
+}
+
+#btn-slide-right-modal {
+  @extend %btn-slide-shared;
+  right: 0;
+  top: 39%;
+  padding: 3em 0.3em 3em 2em;
+}
+
+#btn-slide-left,
+#btn-message-left {
+  @extend %btn-slide-shared;
+  left: 0;
+  padding-left: 0.3em;
+  border-radius: 0 3px 3px 0;
+}
+
+#btn-slide-right,
+#btn-message-right {
+  @extend %btn-slide-shared;
+  right: 0;
+  padding-right: 0.3em;
+  border-radius: 3px 0 0 3px;
+}
+
+#btn-slide-left:hover,
+#btn-slide-right:hover,
+#btn-message-left:hover,
+#btn-message-right:hover {
+  background-color: rgba(206, 206, 206, 0.8);
+}
+
+#btn-slide-left:focus,
+#btn-slide-right:focus,
+#btn-message-left:focus,
+#btn-message-right:focus,
+#btn-slide-left-modal:focus,
+#btn-slide-right-modal:focus {
+  outline: 0;
+}
+
+.dots-messages {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+
+.mdot {
+  @extend %dot-shared;
+  background-color: $color-gray-darker;
+}
+
+.active,
+.mdot:hover {
+  background-color: $color-gray-more-darker;
+}
+
+//----------------------------  footer  -----------------------------//
+footer {
+  @extend %flex-center-shared;
+  position: relative;
+}
+
+.container-center-contact {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $color-ligth-pink;
+  margin: 3.5em 0 0 0;
+}
+
+.app-lang-contact {
+  font-size: 2em;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 2%;
+  z-index: 1;
+  line-height: 1.5;
+
+  & h2 {
+    padding-left: 0.2em;
+    font-size: 1em;
+    text-align: left;
+  }
+
+  & div {
+    display: flex;
+    flex-wrap: wrap;
+
+    & p {
+      padding: 0 0.2em;
+    }
+  }
+}
+
+.contact-gradient {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0em;
+  height: 27em;
+  width: 100%;
+  background-image: linear-gradient(white, $color-brownish);
+  z-index: -1;
+}
+
+.filter-white {
+  filter: invert(100%) sepia(57%) saturate(1158%) hue-rotate(202deg) brightness(116%) contrast(105%);
+}
+
+
+
+

@@ -1,0 +1,118 @@
+{
+  "arabia": {
+    "displayname_fi": "Arabian kampus",
+    "displayname_en": "Arabia campus",
+    "location": "Helsinki",
+    "visitingaddress": "Hämeentie 135 A 00560 Helsinki",
+    "postaladdress": "PL 4072 00079 Metropolia",
+    "phonenumber": "040 579 8403",
+    "restaurantname": "Sodexo Arabia",
+    "foodmenuid": "86",
+    "restauranttype": "SodexoData",
+    "hslstopid": [
+      {
+        "id": 1230101,
+        "type": "bus"
+      },
+      {
+        "id": 1230104,
+        "type": "bus"
+      },
+      {
+        "id": 1230406,
+        "type": "tram"
+      }
+    ]
+  },
+  "karamalmi": {
+    "displayname_fi": "Karamalmin kampus",
+    "displayname_en": "Karamalmi campus",
+    "location": "Espoo",
+    "visitingaddress": "Karaportti 2 02610 Espoo",
+    "postaladdress": "PL 4070 00079 Metropolia",
+    "phonenumber": "040 545 1572",
+    "restaurantname": "Fazer Karamalmi",
+    "foodmenuid": "270540",
+    "restauranttype": "FazerData",
+    "hslstopid": [
+      {
+        "id": 2132208,
+        "type": "bus"
+      },
+      {
+        "id": 2132207,
+        "type": "bus"
+      },
+      {
+        "id": 2132226,
+        "type": "bus"
+      },
+      {
+        "id": 2132225,
+        "type": "bus"
+      }
+    ]
+  },
+  "myllypuro": {
+    "displayname_fi": "Myllypuron kampus",
+    "displayname_en": "Myllypuro campus",
+    "location": "Helsinki",
+    "visitingaddress": "Myllypurontie 1 00920 Helsinki",
+    "postaladdress": "PL 4000 00079 Metropolia",
+    "phonenumber": "040 193 7758",
+    "restaurantname": "Sodexo Myllypuro",
+    "foodmenuid": "158",
+    "restauranttype": "SodexoData",
+    "hslstopid": [
+      {
+        "id": 1454601,
+        "type": "metro"
+      },
+      {
+        "id": 1454602,
+        "type": "metro"
+      },
+      {
+        "id": 1454140,
+        "type": "bus"
+      },
+      {
+        "id": 1454141,
+        "type": "bus"
+      }
+    ]
+  },
+  "myyrmaki": {
+    "displayname_fi": "Myyrmäen kampus",
+    "displayname_en": "Myyrmäki campus",
+    "location": "Vantaa",
+    "visitingaddress": "Leiritie 1, 01600 Myyrmäki, Vantaa",
+    "postaladdress": "PL 4071 00079 Metropolia",
+    "phonenumber": "040 545 1573",
+    "restaurantname": "Sodexo Myyrmäki",
+    "foodmenuid": "152",
+    "restauranttype": "SodexoData",
+    "hslstopid": [
+      {
+        "id": 4150269,
+        "type": "bus"
+      },
+      {
+        "id": 4150201,
+        "type": "bus"
+      },
+      {
+        "id": 4150202,
+        "type": "bus"
+      },
+      {
+        "id": 4150551,
+        "type": "train"
+      },
+      {
+        "id": 4150501,
+        "type": "train"
+      }
+    ]
+  }
+}

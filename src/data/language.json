@@ -1,0 +1,46 @@
+{
+  "campuses": {
+    "fi": "Kampukset",
+    "en": "Campuses"
+  },
+  "hslroute": {
+    "fi": "HSL Reitit",
+    "en": "HSL Routes"
+  },
+  "timetable": {
+    "fi": "Aikataulu",
+    "en": "Timetable"
+  },
+  "menu": {
+    "fi": "Ruokalista",
+    "en": "Menu"
+  },
+  "dishlabels": {
+    "fi": "(G) Gluteeniton, (L) Laktoositon, (VL) Vähälaktoosinen, (M) Maidoton, (*) Voi hyvin, (Veg) Soveltuu vegaaniruokavalioon, (VS) Sis. tuoretta valkosipulia, (A) Sis. allergeeneja",
+    "en": "(G) Gluten free, (L) Lactose free, (VL) Low lactose, (M) Milk-free, (*) Wellbeing, (Veg) Suitable for vegans, (VS) Contains fresh garlic, (A) Contains allergens"
+  },
+  "coronaInfo": {
+    "fi": "Koronaohjeet",
+    "en": "Corona instructions"
+  },
+  "contact": {
+    "fi": "Yhteystiedot",
+    "en": "Contact"
+  },
+  "schoolName": {
+    "fi": "Metropolia Ammattikorkeakoulu ",
+    "en": "Metropolia University of Applied Sciences "
+  },
+  "visitingAddress": {
+    "fi": "Käyntiosoite ",
+    "en": "Visiting address "
+  },
+  "postalAddress": {
+    "fi": "Postiosoite ",
+    "en": "Postal address "
+  },
+  "phone": {
+    "fi": "Puhelin ",
+    "en": "Phone "
+  }
+}

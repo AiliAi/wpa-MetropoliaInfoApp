@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="theme-color" content="#FF7820">
+  <meta name="background-color" content="#FFFFFF">
+  <meta name="description" content="Metropolia info Progressive Web App!">
+  <meta name="keywords" content="Metropolia, info, lounaslistat, foodlists, koronainfo, coronainfo">
+  <title>Metropolia info APP</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="MetropoliaInfo">
+
+
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon"/>
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png"/>
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-touch-icon-57x57.png"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-touch-icon-72x72.png"/>
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-touch-icon-76x76.png"/>
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-touch-icon-114x114.png"/>
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-touch-icon-120x120.png"/>
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-touch-icon-144x144.png"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-touch-icon-152x152.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon-180x180.png"/>
+</head>
+<!-------------------------- Nav buttons --------------------------->
+<nav>
+  <div class="tool-buttons">
+    <label class="switch">
+      <input type="checkbox" id="togBtn">
+      <div class="slider round">
+        <span class="fi">🇫🇮</span>
+        <span class="en"> 🇬🇧</span>
+      </div>
+    </label>
+  </div>
+  <!-------------------------- Header-logo --------------------------->
+  <img id="metropolia-logo-small" src="./assets/icons/metropolia.svg" alt="metropolia logo">
+  <form>
+    <label for="campuses" class="app-lang-campuses">Campus:</label>
+    <select name="campuses" id="campuses">
+      <option value="arabia">Arabia</option>
+      <option value="karamalmi">Karamalmi</option>
+      <option value="myllypuro">Myllypuro</option>
+      <option value="myyrmaki">Myyrmäki</option>
+    </select>
+  </form>
+</nav>
+<!-------------------------- Header-logo big --------------------------->
+<div class="container-center">
+  <img id="metropolia-logo" src="./assets/icons/metropolia.svg" alt="metropolia logo">
+</div>
+
+<header>
+  <div id="hero">
+    <div id="hero-front">
+      <h1 class="current-campus">Karamalmin kampus</h1>
+    </div>
+  </div>
+</header>
+
+<body>
+
+<main class="gradient">
+  <!------------------------- Messages -------------------------->
+  <section id="message-container">
+    <!-- <h2>Messages</h2> -->
+    <div class="metropolia-messages">
+      <button id="btn-message-left">&#10094;</button>
+      <button id="btn-message-right">&#10095;</button>
+      <ul class="messages-list"></ul>
+    </div>
+    <div class="dots-messages">
+    </div>
+  </section>
+  <!-------------------------- Forecast --------------------------->
+  <div id="forecast-container">
+    <ul id="forecast">
+      <li class="name"></li>
+      <li class="weather-icon"></li>
+      <li class="desc"></li>
+      <li class="temp"></li>
+    </ul>
+  </div>
+  <!-------------------------- Foodlists --------------------------->
+  <div class="container-center">
+
+    <section id="food-list-container">
+      <h2 class="app-lang-menu">Ruokalistat</h2>
+      <div class="food-list-card">
+        <div class="food-list-card-header">
+          <h3 class="res-heading"></h3>
+          <h4 class="res-date">today</h4>
+        </div>
+        <div class="dishes">Loading data...</div>
+        <p class="dishes-labels app-lang-dishlabels"></p>
+      </div>
+    </section>
+
+
+    <!-------------------- HSL transport information ------------------->
+    <section id="hsl-container">
+      <h2 class="app-lang-hslroute">HSL Reitit</h2>
+      <div class="hsl-card">
+        <h3 class="app-lang-timetable">Karanristi</h3>
+        <div class="hsl-container">
+          <p>Loading data...</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!----------------- Corona instruction slideshow ----------------->
+  <section id="corona-info-container">
+
+    <h2 class="app-lang-coronaInfo">Koronaohjeet</h2>
+
+    <div class="slideshow-container">
+      <button id="btn-slide-left">&#10094;</button>
+      <button id="btn-slide-right">&#10095;</button>
+    </div>
+    <div class="all-dots">
+    </div>
+  </section>
+</main>
+
+<!-------------------------- Contact --------------------------->
+<footer>
+  <div class="contact-gradient"></div>
+  <div class="container-center-contact">
+    <section id="contact">
+      <h2 class="app-lang-contact">Yhteystiedot</h2>
+      <div>
+        <p class="app-lang-schoolName">Metropolia Ammattikorkeakoulu</p>
+        <p class="schoolName pad"></p>
+      </div>
+      <div>
+        <p class="app-lang-visitingAddress">Käyntiosoite Myllypurontie 1, 00920 Helsinki</p>
+        <p class="visitingAddress pad"></p>
+      </div>
+      <div>
+        <p class="app-lang-postalAddress">Postiosoite PL 4000, 00079 Metropolia</p>
+        <p class="postalAddress pad"></p>
+      </div>
+      <div>
+        <p class="app-lang-phone">Puhelin 09 7424 5000</p>
+        <p class="phone pad"></p>
+      </div>
+    </section>
+  </div>
+</footer>
+
+<!-------------------------  The Modal ---------------------------->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-container">
+    <div class="modal-content">
+      <section id="corona-info-container-modal">
+        <span class="close">
+          &times;
+        </span>
+        <div class="slideshow-container-modal">
+          <button id="btn-slide-left-modal">&#10094;</button>
+          <button id="btn-slide-right-modal">&#10095;</button>
+        </div>
+        <div class="all-dots-modal">
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
+
