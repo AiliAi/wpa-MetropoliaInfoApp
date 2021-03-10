@@ -84,7 +84,7 @@ const plusSlidesModal = (n) => {
  * @param {Number} n
  */
 function currentSlideModal(n) {
-  showSlidesModal((slideIndexModal = n));
+  showSlidesModal(slideIndexModal = n);
 }
 
 //event listener for right button

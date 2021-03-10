@@ -102,9 +102,9 @@ window.addEventListener("load", () => {
 const plusSlides = (n) => {
   clearInterval(myTimer);
   if (n < 0) {
-    showSlides((slideIndex -= 1));
+    showSlides(slideIndex -= 1);
   } else {
-    showSlides((slideIndex += 1));
+    showSlides(slideIndex += 1);
   }
 
   if (n === -1) {
@@ -128,7 +128,7 @@ function currentSlide(n) {
   myTimer = setInterval(() => {
     plusSlides(n + 1);
   }, 5000);
-  showSlides((slideIndex = n));
+  showSlides(slideIndex = n);
 }
 
 //event listener for right button
